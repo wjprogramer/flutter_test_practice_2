@@ -5,11 +5,14 @@ import 'package:flutter_test_practice_2/screens/home.dart';
 import 'package:provider/provider.dart';
 
 class TestingApp extends StatelessWidget {
+  static GlobalKey<NavigatorState> navKey = GlobalKey();
+
   @override
   Widget build(BuildContext context) {
     return ChangeNotifierProvider<Favorites>(
       create: (context) => Favorites(),
       child: MaterialApp(
+        navigatorKey: navKey,
         title: 'Testing Sample',
         theme: ThemeData(
           primarySwatch: Colors.blue,

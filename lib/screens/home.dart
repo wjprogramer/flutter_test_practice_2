@@ -13,6 +13,7 @@ class HomePage extends StatelessWidget {
         title: Text('Testing Sample'),
         actions: <Widget>[
           TextButton.icon(
+            key: const ValueKey('go-favorites-page'),
             style: TextButton.styleFrom(primary: Colors.white),
             onPressed: () {
               Navigator.pushNamed(context, FavoritesPage.routeName);
